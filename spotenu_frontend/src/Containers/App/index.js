@@ -38,7 +38,6 @@ const store = createStore(generateReducers(history), compose(...middlewares));
 const App = () => (
 
   <Provider store={store}>
-
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <CssBaseline />
@@ -46,7 +45,6 @@ const App = () => (
           <Router history={history} />
         </AppWrapper>
       </ThemeProvider>
-   
   </Provider>
 );
 

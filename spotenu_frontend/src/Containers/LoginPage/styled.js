@@ -11,7 +11,7 @@ export const DivTitle = styled.div`
     width: 360px;
     height: 42px;
     text-align:center;
-     justify-items:center;
+    justify-items:center;
     margin-top:20px;
     `
 
@@ -28,18 +28,13 @@ export const Text = styled.text `
      text-align:center;
      justify-items:center;
      margin-top: 10px;
-  
-      
-    `
+`;
 export const WrapperAdress = styled.div `
     margin-bottom:35px;
     display:flex;
     flex-direction:column;
     text-align:center;
-   
-    
-    /* justify-content:flex-start; */
-`
+`;
 export const Button = styled.button `
     width: 328px;
     height: 42px;
@@ -48,7 +43,7 @@ export const Button = styled.button `
     font-size:16px;
     margin: 8px 16px;
     border-radius: 4px;
-`
+`;
 export const TextFieldStyled = styled(TextField) `
     width: 328px;
     height: 56px;
@@ -62,5 +57,5 @@ export const Image = styled.img`
     width: 200px;
     height: 100px;
     object-fit: contain;
-    
+
 `;
