@@ -5,12 +5,8 @@ import { routes } from "../Router/index";
 import { WrapperSplashScreen, Img } from "./styled";
 
  
-class SplashScreen extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-  
+class SplashScreen extends React.Component {
+   
     componentDidMount() {
       window.setTimeout(this.props.goToLogin, 100);
     }

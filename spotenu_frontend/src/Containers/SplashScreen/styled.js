@@ -8,6 +8,15 @@ export const WrapperSplashScreen = styled.div `
 `
 export const Img = styled.img ` 
      width: 65%;
-    object-fit:contain; 
+     object-fit:contain; 
+     animation:  infinite 20s linear;
+        @keyframes spin {
+        0% {
+        transform: rotateZ(0deg);
+        }
+        100% {
+        transform: rotateZ(360deg);
+        }
+}
    
 `

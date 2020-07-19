@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
      background: ${theme.background};
-    font-family:'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+     font-family:'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
   };
 `;
 
