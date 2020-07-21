@@ -5,7 +5,7 @@ import SplashScreen from "../../Containers/SplashScreen/index";
 import LoginPage from "../../Containers/LoginPage/index";
 import SignUpPage from "../../Containers/SignUpPage/index";
 import PageError from "../../Containers/PageError/index";
-import HomePageAdmin from "../HomePageAdmin";
+import HomePageAdmin from "../../Containers/HomePageAdmin";
 
 
 export const routes = {

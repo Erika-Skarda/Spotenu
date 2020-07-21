@@ -2,7 +2,7 @@ import axios from "axios";
 import {routes} from "../../src/Containers/Router/index";
 import {replace, push} from "connected-react-router";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "http://localhost:3001"
 
 export const setGenres = (genres) => ({
     type: "SET_GENRES",
@@ -16,18 +16,12 @@ export const setGenreSelected = (genreId) => ({
         genreId
     }
 })
-export const setMessage = (text, color) => ({
-    type: "SET_MESSAGE",
-    payload: {
-        text,
-        color
-    }
-})
+
 export const getGenres = () => async (dispatch) => {
     const token = window.localStorage.getItem("token");
     const headers = {
             headers: {
-                'aauthorization':token,           
+                'authorization':token,           
             }
     }
     try {
@@ -39,12 +33,11 @@ export const getGenres = () => async (dispatch) => {
     catch (err) {
        
         console.error(err.response)
-        dispatch(setMessage(err?.response?.data?.message || "Não foi possivel acessar a lista de gêneros!", "red"))
-        
     }
 }
 
 export const createGenre = (genre) => async (dispatch) => {
+    const token = window.localStorage.getItem("token");
 
     const body = {
         genre
@@ -59,12 +52,12 @@ export const createGenre = (genre) => async (dispatch) => {
                 }
             })
 
-        dispatch(setMessage(response?.data?.message, "green"))
+        
         dispatch(getGenres())
 
     } catch (err) {
        
-        dispatch(setMessage(err?.response?.data?.message || "Não foi possivel cria o gênero", "red"))
+        console.error(err.response)
     
     }
 }
