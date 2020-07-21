@@ -6,7 +6,7 @@ export const Container = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: "#F2B3E1";
   padding: 16px;
 `;
 
@@ -15,6 +15,7 @@ export const WrapperIcons = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  background-color: "#F2B3E1";
 `;
 export const DivIcon = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ export const DivIcon = styled.div`
 export const Img = styled.img`
   width: 32px;
   height: 32px;
-  color: #585858;
+  color:"#D1B4D9";
   opacity: 60%;
   cursor: pointer;
 `;

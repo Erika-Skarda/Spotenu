@@ -1,8 +1,8 @@
 import { push } from "connected-react-router";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { routes } from "../../Router";
-import { Container, DivIcon, Img, WrapperIcons } from "./style";
+import { routes } from "../../Containers/Router";
+import { Container, DivIcon, Img, WrapperIcons } from "./styled";
 
 class Footer extends Component {
 
@@ -10,15 +10,15 @@ class Footer extends Component {
     const { goToHome, goToMyProfile, goToCompany } = this.props;
 
     return (
-      <Container>
+      <Container  style={{backgroundColor: "#F2B3E1" }}>
         <WrapperIcons>
           <DivIcon>
             <Img
               src={require("../../Assets/search.svg")}
               title="Lupa"
               alt="ícone para pesquisar algo"
-              style={{ color: "very dark gray" }}
-              onClick={goToCompany}
+             
+              //onClick={goToCompany}
             />
           </DivIcon>
           <DivIcon>
@@ -34,7 +34,7 @@ class Footer extends Component {
               src={require("../../Assets/user.svg")}
               title="Perfil"
               alt="ícone para ir para o perfil do usuário"
-              onClick={goToMyProfile}
+              //onClick={goToMyProfile}
             />
           </DivIcon>
         </WrapperIcons>

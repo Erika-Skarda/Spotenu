@@ -36,7 +36,7 @@ class LoginPage extends Component {
       onClickLogin = (event) => {
         event.preventDefault();
         const { emailOrNickname, password } = this.state
-        this.props.doLogin(emailOrNickname, password)
+        this.props.login(emailOrNickname, password)
       }
     
       handleClickShowPassword = () => {
@@ -54,7 +54,7 @@ class LoginPage extends Component {
                 <WrapperAdress onSubmit={this.onClickLogin}>  
                   <TextFieldStyled         
                       onChange={this.handleFieldChange}
-                      name="email ou nickname"
+                      name="emailOrNickname"
                       type="text"
                       label="E-mail ou Nickname"
                       value={emailOrNickname}
@@ -98,7 +98,7 @@ class LoginPage extends Component {
                           ),
                         }}
                       />
-                        <Button type="submit">Entrar</Button>
+                        <Button type="submit" onClick={this.onClickLogin}>Entrar</Button>
                 </WrapperAdress> 
                 <DivTitle>
                     <Text>Não possui cadastro? <strong onClick={this.props.redirectSignUp}

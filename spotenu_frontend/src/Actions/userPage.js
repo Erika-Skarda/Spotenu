@@ -2,24 +2,22 @@ import axios from "axios";
 import {routes} from "../../src/Containers/Router/index";
 import {replace, push} from "connected-react-router";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "http://localhost:3001"
 
 
-export const setUserInfo = (info) => { 
-    return { type: "SET_USER_INFO", 
+export const setUserInfo = (info) => ({ 
+   type: "SET_USER_INFO", 
     payload: { 
-        info 
-    }, 
-  };
-};
+        info    
+  }
+});
 //**************************************************//  
-export const setMessage = (text, color) => ({
-    type: "SET_MESSAGE",
+export const setAllBands = (bands) => ({
+    type: "SET_ALL_BANDS",
     payload: {
-        text,
-        color
+        bands
     }
-})
+});
 //*************************************************************//
 export const login = (emailOrNickname, password) => async(dispatch) => {
     const body = {
@@ -39,7 +37,7 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
 
     } catch(err){
 
-       dispatch(setMessage(err?.response?.data?.message || "Não foi possivel fazer o login!", "red"))
+        alert("Ocorreu um erro inesperado. Tente novamente")
     console.log(emailOrNickname,password)
     }
 };
@@ -77,3 +75,42 @@ export const redirectSignUp = () => async(dispatch) => {
           alert("Ocorreu um erro inesperado. Tente novamente")
       }
  };
+ export const getAllBands = () => async (dispatch) => {
+    const token = window.localStorage.getItem("token");
+    try {
+       
+        const response = await axios.get(`${baseUrl}/user/band`, {
+            headers: {
+                "authorization": token
+            }
+        })
+       
+        dispatch(setAllBands(response.data))
+    }
+    catch (err) {
+    
+        console.error(err.response)
+    }   
+};
+export const aproveBand = (id) => async (dispatch) => {
+    const token = window.localStorage.getItem("token");
+    try {
+       
+      await axios.post(`${baseUrl}/user/approve`,
+            { id },
+            {
+                headers: {
+                    
+                    "authorization":token
+                }
+            })
+      
+        dispatch(getAllBands())
+    }
+    catch (err) {
+      
+        console.error(err.response)
+     
+    }
+
+}
