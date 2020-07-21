@@ -21,7 +21,7 @@ class LoginPage extends Component {
 
     this.state =  {
         form: {
-            email: "",
+            emailOrNickname: "",
             password: "",
             showPassword: false,
         }
@@ -35,15 +35,15 @@ class LoginPage extends Component {
     
       onClickLogin = (event) => {
         event.preventDefault();
-        const { email, password } = this.state
-        this.props.doLogin(email, password)
+        const { emailOrNickname, password } = this.state
+        this.props.doLogin(emailOrNickname, password)
       }
     
       handleClickShowPassword = () => {
         this.setState(state => ({ showPassword: !state.showPassword }));
       };
     render () {
-        const { email, password } = this.state;
+        const { emailOrNickname, password } = this.state;
         return (
             <LoginWrapper>
                 <Image src={require("../../Assets/logo.png")}
@@ -54,10 +54,10 @@ class LoginPage extends Component {
                 <WrapperAdress onSubmit={this.onClickLogin}>  
                   <TextFieldStyled         
                       onChange={this.handleFieldChange}
-                      name="email"
-                      type="email"
+                      name="email ou nickname"
+                      type="text"
                       label="E-mail ou Nickname"
-                      value={email}
+                      value={emailOrNickname}
                       style={{
                         marginTop:'5px',
                         marginLeft:'auto',
@@ -66,7 +66,7 @@ class LoginPage extends Component {
                       variant="outlined"
                       InputLabelProps = {{shrink:true}}
                       required={true}
-                      inputProps={{ pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" }}
+                      //inputProps={{ pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" }}
                       
                     />
 
@@ -116,7 +116,7 @@ class LoginPage extends Component {
 
 
 const mapDispatchToProps = (dispatch) => 
-     bindActionCreators(UserAction,dispatch)
+  bindActionCreators(UserAction,dispatch)
        
      
 export default connect(null, mapDispatchToProps)(LoginPage)
