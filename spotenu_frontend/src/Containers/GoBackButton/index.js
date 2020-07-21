@@ -12,6 +12,7 @@ class BackButton extends Component {
     
 render() {
     const {goBack} = this.props
+    
     return (
 
         <Fragment>
