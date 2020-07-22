@@ -10,7 +10,8 @@
     const initialState = {
         allBands: [],
         allUsers: [],
-        userInfo: {}
+        bandId: "",
+        userInfo: []
     }
     
     const user = (state = initialState, action) => {
@@ -32,6 +33,11 @@
                 return {
                     ...state,
                     userInfo: action.payload.info
+                }
+            case "GET_BAND_ID'":
+                return {
+                    ...state,
+                    bandId: action.payload.id
                 }
     
             default:

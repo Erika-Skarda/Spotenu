@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const WrapperHeader = styled.div `
-    height:50px;
-    width:360px; 
+    height: 50px;
+    width: 100%; 
     display:flex; 
-    padding:15px
-  
+    padding:15px;
 `;
 export const WrapperTitle = styled.div `
     width: 175px;

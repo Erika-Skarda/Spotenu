@@ -11,12 +11,25 @@ export const setUserInfo = (info) => ({
         info    
   }
 });
+export const setAllUsers = (users) => ({
+    type: "SET_ALL_USERS",
+    payload: {
+        users
+    }
+});
 //**************************************************//  
 export const setAllBands = (bands) => ({
     type: "SET_ALL_BANDS",
     payload: {
         bands
     }
+});
+export const getBandId = (id) =>({
+
+        type: 'GET_BAND_ID',
+        payload: {
+            id
+        }
 });
 //*************************************************************//
 export const login = (emailOrNickname, password) => async(dispatch) => {
@@ -38,7 +51,7 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
     } catch(err){
 
         alert("Ocorreu um erro inesperado. Tente novamente")
-    console.log(emailOrNickname,password)
+        console.log(emailOrNickname,password, err.message)
     }
 };
 export const redirectSignUp = () => async(dispatch) => {
@@ -50,7 +63,7 @@ export const redirectSignUp = () => async(dispatch) => {
     }
 };
 
- export const singUp = (name, email, nickname, password, role, description_band) => async (dispatch) => {
+ export const signUp = (name, email, nickname, password, role, description_band) => async (dispatch) => {
      const body = {
          name,
          email,
@@ -92,7 +105,7 @@ export const redirectSignUp = () => async(dispatch) => {
         console.error(err.response)
     }   
 };
-export const aproveBand = (id) => async (dispatch) => {
+export const approveBand = (id) => async (dispatch) => {
     const token = window.localStorage.getItem("token");
     try {
        
@@ -100,11 +113,11 @@ export const aproveBand = (id) => async (dispatch) => {
             { id },
             {
                 headers: {
-                    
+
                     "authorization":token
                 }
             })
-      
+            alert('Banda aprovada com sucesso!')
         dispatch(getAllBands())
     }
     catch (err) {
