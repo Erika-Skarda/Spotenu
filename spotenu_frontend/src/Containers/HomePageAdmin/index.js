@@ -1,11 +1,12 @@
 import { push, GoBack, replace } from "connected-react-router";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { routes } from "../Router/index"
+import { routes } from "../../Containers/Router"
 import Footer from "../../Components/Footer/index";
 import ProfilePage from "../../Components/PorfilePage";
 import BackButton from "../../Containers/GoBackButton/index";
 import { Button } from "./styled"
+import BandList from "./BandList";
 
 class HomePageAdmin extends Component {
     constructor(props) {
@@ -27,9 +28,12 @@ class HomePageAdmin extends Component {
   render() {
       return(
       <>
-        <BackButton showButtonGoBack={true}  header={"Oi"}/>
+        <BackButton showButtonGoBack={true}/>
         <ProfilePage />
         <Button type="button">Bandas</Button>
+        <Button type="button">Criar gêneros musicais</Button>
+        <Button type="button">Cadastrar novo Admin</Button>
+        <BandList />
         <Footer />
 
       </>

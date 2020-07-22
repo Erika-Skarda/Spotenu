@@ -11,7 +11,7 @@ import { WrapperTitle,
 
 class BackButton extends Component {
     
-render() {
+ render() {
     const { goBack } = this.props
     
     return (
@@ -27,7 +27,7 @@ render() {
                 
             </WrapperHeader>
     )
-}
+ }
 }
 const mapDispatchToProps = dispatch => {
     return {

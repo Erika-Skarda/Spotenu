@@ -201,7 +201,7 @@ handleOnSubmit = event => {
     } else {
 
         if(form.description_band) {
-            this.props.singUp(
+            this.props.signUp(
                 form.name, 
                 form.email, 
                 form.nickname,
@@ -211,14 +211,13 @@ handleOnSubmit = event => {
             )
         } else {
 
-            this.props.singUp(
+            this.props.signUp(
                 form.name, 
                 form.email, 
                 form.nickname,
                 form.password,
                 form.role    
             )
-
         }
     }
 }
