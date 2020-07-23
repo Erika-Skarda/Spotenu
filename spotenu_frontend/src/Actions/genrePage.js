@@ -2,7 +2,7 @@ import axios from "axios";
 import {routes} from "../../src/Containers/Router/index";
 import {replace, push} from "connected-react-router";
 
-const baseUrl = "http://localhost:3001"
+const baseUrl = "http://localhost:3000"
 
 export const setGenres = (genres) => ({
     type: "SET_GENRES",
@@ -29,6 +29,7 @@ export const getGenres = () => async (dispatch) => {
         const response = await axios.get(`${baseUrl}/genre`, headers)
     
         dispatch(setGenres(response.data))
+      
     }
     catch (err) {
        

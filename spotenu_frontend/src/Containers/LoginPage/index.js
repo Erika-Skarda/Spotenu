@@ -31,6 +31,7 @@ class LoginPage extends Component {
         this.setState({
           [event.target.name]: event.target.value
         });
+        this.setState({form:""})
       };
     
       onClickLogin = (event) => {

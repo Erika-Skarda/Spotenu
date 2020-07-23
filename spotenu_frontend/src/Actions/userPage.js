@@ -1,8 +1,8 @@
 import axios from "axios";
-import {routes} from "../../src/Containers/Router/index";
-import {replace, push} from "connected-react-router";
+import { routes } from "../../src/Containers/Router/index";
+import { replace, push } from "connected-react-router";
 
-const baseUrl = "http://localhost:3001"
+const baseUrl = "http://localhost:3000"
 
 
 export const setUserInfo = (info) => ({ 
@@ -41,18 +41,20 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
         const response = await axios.post(`${baseUrl}/user/login`, body)
         
         const token = response.data.Access_token
-        const userRole = response.data.role
+        const userRole = response.data.Role
       
         localStorage.setItem("token", token)
         localStorage.setItem("userRole", userRole)
         // Ver como será dispatch
-        dispatch(push(routes.home))
+       
 
     } catch(err){
 
         alert("Ocorreu um erro inesperado. Tente novamente")
         console.log(emailOrNickname,password, err.message)
-    }
+    } 
+    
+    dispatch(push(routes.home))
 };
 export const redirectSignUp = () => async(dispatch) => {
     try {
@@ -63,7 +65,15 @@ export const redirectSignUp = () => async(dispatch) => {
     }
 };
 
- export const signUp = (name, email, nickname, password, role, description_band) => async (dispatch) => {
+ export const signUp = (
+    name, 
+    email, 
+    nickname, 
+    password, 
+    role, 
+    description_band
+    ) => async (dispatch) => {
+
      const body = {
          name,
          email,
@@ -72,19 +82,22 @@ export const redirectSignUp = () => async(dispatch) => {
          role,
          description_band
      }
+
       try {
           
           const response = await axios.post(`${baseUrl}/user/signup`, body)
           
           const token = response.data.Access_token
-          const userRole = response.data.role
+          const userRole = response.data.Role
 
           localStorage.setItem("token", token)
           localStorage.setItem("userRole", userRole)
           dispatch(push(routes.home))
       
-            alert("Usuário cadastrado com sucesso!")
-      } catch {
+          alert("Usuário cadastrado com sucesso!");
+
+      } catch(err) {
+          console.log(err)
           alert("Ocorreu um erro inesperado. Tente novamente")
       }
  };
@@ -99,11 +112,27 @@ export const redirectSignUp = () => async(dispatch) => {
         })
        
         dispatch(setAllBands(response.data))
+        console.log(response.data)
     }
     catch (err) {
     
         console.error(err.response)
     }   
+};
+export const getBandDetails = (id) => async (dispatch) => {
+    const token = window.localStorage.getItem("token");
+    const response = await axios.get(
+        `${baseUrl}/user/id`,
+        { id },
+        {
+          headers: {
+            "authorization": token,
+          },
+        }
+      );
+
+      dispatch(setUserInfo(response.data));
+      console.log(response.data.trip);
 };
 export const approveBand = (id) => async (dispatch) => {
     const token = window.localStorage.getItem("token");

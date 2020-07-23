@@ -11,15 +11,16 @@ class BandList extends Component{
   componentDidMount() {
     const token = localStorage.getItem('token')
 
-    // if (token === null) {
-    //   this.props.goToLogin();
-    // }
+     if (token === null) {
+       this.props.goToLogin();
+     }
 
     this.props.getAllBands();
   }
 
   handleBandId = (id) => {
-    this.props.getBandId(id)
+    this.props.getBandId(id);
+    this.props.goToDetails();
   
   }
 
@@ -36,23 +37,22 @@ class BandList extends Component{
       
        {isLogged && <Button onClick={this.handleLogout}>Sair</Button>}
 
-      <h1>Lista das bandas</h1>
-    <Main>
-        <ul>
-            {this.props.allUsers && this.props.allUsers.map(band => {
-              return (
-                <li>
-                    <strong> Nome: {band.name}</strong> 
-                    <p>Descrição: {band.description_band} </p>
-                    <p>Nickname: {band.nickname}</p>
-                    <p>E-mail: {band.email}</p>
-                    <Button onClick={() => this.props.approveBand(band.id)}>Aprovar</Button>
-                </li>
-              )
-            })}
+        <h1>Lista das bandas</h1>
+      <Main>
+          <ul>
+              {this.props.allBands && this.props.allBands.map(band => {
+                
+                return (
+                  <li>
+                      <strong> Nome: {band.name}</strong> 
+                      <p>Aprovada: {band.is_approved}</p>
+                      <Button onClick={() => {this.handleBandId(band.id)}}>Detalhes</Button>
+                  </li>
+                )
+              })}
           </ul>
-      
-    </Main>
+        
+      </Main>
 
     </ListPageWrapper>
   );
@@ -60,16 +60,16 @@ class BandList extends Component{
 }
 
 const mapStateToProps = state => ({
-  bandId: state.user.bandId,
-  userInfo: state.user.userInfo,
-  allUsers: state.user.allUsers
+
+  allBands: state.user.allBands
+
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     getAllBands: () => dispatch(getAllBands()),
     getBandId: (id) => dispatch(getBandId(id)),
-    approveBand: (id) => dispatch(approveBand(id)),
+    goToDetails: (id) => dispatch(push(routes.band)),
     goToLogin: () => dispatch(replace(routes.login)),
   }
 }

@@ -7,6 +7,7 @@ import ProfilePage from "../../Components/PorfilePage";
 import BackButton from "../../Containers/GoBackButton/index";
 import { Button } from "./styled"
 import BandList from "./BandList";
+import GenreList from "./GenreList";
 
 class HomePageAdmin extends Component {
     constructor(props) {
@@ -15,25 +16,30 @@ class HomePageAdmin extends Component {
 
         }
     };
-    // componentDidMount() {
+componentDidMount() {
 
-    //    const token = localStorage.getItem('token');
-    //    const userRole = localStorage.getItem("userRole")
-    
-    //     if (token === null || userRole !== "admin") {
-    //        this.props.goToLogin();
-    //      }
+    const token = localStorage.getItem('token');
+    const userRole = localStorage.getItem("userRole")
 
-    //   }
+        if (token === null || userRole !== "admin") {
+
+        this.props.goToLogin();
+
+        }
+
+}
   render() {
+      const { goToBand } = this.props;
+
       return(
       <>
         <BackButton showButtonGoBack={true}/>
         <ProfilePage />
-        <Button type="button">Bandas</Button>
+        <Button type="button" onClick={goToBand}>Bandas</Button>
         <Button type="button">Criar gêneros musicais</Button>
         <Button type="button">Cadastrar novo Admin</Button>
-        <BandList />
+        <GenreList />
+       
         <Footer />
 
       </>
@@ -44,6 +50,7 @@ const mapDispatchToProps = dispatch => {
     return {
         //goBack: () => dispatch(goBack()),
         goToLogin: () => dispatch(replace(routes.login)),
+        goToBand: () => dispatch(push(routes.bandlist))
     
     }
 }
