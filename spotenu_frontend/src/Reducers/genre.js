@@ -17,4 +17,4 @@ const genre = (state = initialState, action) => {
     }
 }
 
-export default genre
+export default genre;

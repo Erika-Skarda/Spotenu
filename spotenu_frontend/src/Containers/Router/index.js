@@ -5,14 +5,19 @@ import SplashScreen from "../../Containers/SplashScreen/index";
 import LoginPage from "../../Containers/LoginPage/index";
 import SignUpPage from "../../Containers/SignUpPage/index";
 import PageError from "../../Containers/PageError/index";
-import HomePageAdmin from "../../Containers/HomePageAdmin";
-
+import HomePageAdmin from "../../Containers/HomePageAdmin/index";
+import BandList from "../../Containers/HomePageAdmin/BandList/index";
+import GenreList from "../..//Containers/HomePageAdmin/GenreList/index";
+import BandDetails from "../HomePageAdmin/BandDetails";
 
 export const routes = {
   splashScreen: "/",
   login:"/login",
   signup:"/signup",
   home: "/home",
+  bandlist: "/band",
+  band:"/details",
+  genrelist: "/genre"
   
 };
 
@@ -24,6 +29,8 @@ function Router(props) {
         <Route exact path = {routes.login} component = {LoginPage} />
         <Route exact path = {routes.signup} component = {SignUpPage} />
         <Route exact path={routes.home} component={HomePageAdmin} />
+        <Route exact path={routes.bandlist} component={BandList} />
+        <Route exact path={routes.band} component={BandDetails} />
         <Route path={routes.error} component={PageError} /> 
       </Switch>
     </ConnectedRouter>

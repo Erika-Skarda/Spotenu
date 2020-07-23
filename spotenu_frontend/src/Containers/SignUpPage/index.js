@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { connect } from"react-redux"
 import { bindActionCreators } from "redux";
 import * as UserAction from "../../Actions/userPage";
+import {signUp }  from "../../Actions/userPage";
 import * as RoleAction from "../../Actions/role"
 import {
         Button, 
@@ -184,7 +185,7 @@ class SignUpPage extends Component {
 handleRoleChange = event => {
 
     this.props.changeRoleAction(event.target.value);
-    console.log(event.target.value, "foi")
+    console.log(event.target.value)
 };
 handleOnChangeForm = event => {
     const { name, value } = event.target;
@@ -194,19 +195,19 @@ handleOnSubmit = event => {
     event.preventDefault()
     const {form} = this.state
     const user = this.props
-
+    //this.form.role = this.props.changeRoleAction(this.props.selectedRole)
     if(form.password !== form.confirmPassword){
         alert("Senhas divergentes. Tente novamente")
         
     } else {
 
-        if(form.description_band) {
+        if(this.props.selectedRole === "banda") {
             this.props.signUp(
                 form.name, 
                 form.email, 
                 form.nickname,
                 form.password, 
-                form.role,
+                this.props.selectedRole,
                 form.description_band
             )
         } else {
@@ -215,8 +216,9 @@ handleOnSubmit = event => {
                 form.name, 
                 form.email, 
                 form.nickname,
-                form.password,
-                form.role    
+                this.props.selectedRole,
+                form.password
+            
             )
         }
     }
@@ -232,13 +234,13 @@ render() {
                 <Text>Cadastrar</Text>
             </DivTitle>
 
-            <select  value = {this.props.changeRole} onChange ={this.handleRoleChange}>
+            <select  value = {this.props.selectedRole} onChange ={this.handleRoleChange}>
               <option value="" disabled selected>Escolha o seu tipo de cadastro</option>
                 <option value="banda">Banda|Cantor(a)</option>
                 <option value="ouvinte não pagante">Ouvinte Free</option>
                 <option value="ouvinte pagante">Ouvinte Premium</option>
            </select>
-            {this.props.changeRole === "banda" && 
+            {this.props.selectedRole === "banda" && 
             
             <form onSubmit={this.handleOnSubmit}>
                {FormSignUpBanda.map(info => {
@@ -268,7 +270,7 @@ render() {
                <Button type="submit">Cadastrar</Button>
             
            </form>}
-           {(this.props.changeRole === "ouvinte não pagante" || this.props.changeRole === "ouvinte pagante") && 
+           {(this.props.selectedRole === "ouvinte não pagante" || this.props.selectedRole === "ouvinte pagante") && 
             
             <form onSubmit={this.handleOnSubmit}>
                {FormSignUpOuvinte.map(info => {
@@ -306,14 +308,16 @@ render() {
  const mapStateToProps = state => ({
   
     user: state.user.userInfo,
-    changeRole: state.role && state.role.selectedRole
+    selectedRole: state.role && state.role.selectedRole
  })
 
 const mapDispatchToProps = (dispatch) => {  
-    bindActionCreators(UserAction,dispatch)
+     //bindActionCreators(UserAction,dispatch)
     //bindActionCreators(RoleAction,dispatch)
     return {
-     changeRoleAction: role => dispatch(changeRoleAction(role))
+     changeRoleAction: role => dispatch(changeRoleAction(role)),
+     signUp:(name, email, nickname, password, role, description_band) => 
+     dispatch(signUp(name, email, nickname, password, role, description_band))
     }
 }
 
