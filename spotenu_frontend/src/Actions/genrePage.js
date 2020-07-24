@@ -2,7 +2,7 @@ import axios from "axios";
 import {routes} from "../../src/Containers/Router/index";
 import {replace, push} from "connected-react-router";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "https://7nok4l82c2.execute-api.us-east-1.amazonaws.com/dev"
 
 export const setGenres = (genres) => ({
     type: "SET_GENRES",

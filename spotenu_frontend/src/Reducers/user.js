@@ -2,7 +2,7 @@
     const initialState = {
         allBands: [],
         allUsers: [],
-        bandId: "",
+        band: undefined,
         userInfo: []
     }
     
@@ -26,10 +26,10 @@
                     ...state,
                     userInfo: action.payload.info
                 }
-            case "GET_BAND_ID'":
+            case "SET_SELECTED_BAND":
                 return {
                     ...state,
-                    bandId: action.payload.id
+                    band:action.payload.band
                 }
     
             default:
