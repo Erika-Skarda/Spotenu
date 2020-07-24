@@ -24,21 +24,22 @@ class BandDetails extends Component{
 
   render() {
     const isLogged = localStorage.getItem("token") !== null;
-    const { userInfo } = this.props
+    const { band } = this.props
+    const { goBack } = this.props
   return (
     <ListPageWrapper>
       
        {isLogged && <Button onClick={this.handleLogout}>Sair</Button>}
-       <Button onClick={() => this.props.goBack}>Lista das bandas</Button>
+       <Button onClick={goBack}>Lista das bandas</Button>
       <h1>Detalhes da Banda</h1>
     <Main>
         <div>
-            <p><strong> Nome: </strong>{userInfo.name}</p>
-            <p><strong>Descrição: </strong>{userInfo.description_band} </p>
-            <p><strong>Nickname:</strong> {userInfo.nickname}</p>
-            <p><strong>E-mail: </strong> {userInfo.email}</p> 
-            <p><strong>Aprovada: </strong> {userInfo.is_approved}</p>
-            <Button onClick={() => {this.props.approveBand(userInfo.id)}}>Aprovar</Button>
+            <p><strong>Nome: </strong>{band.name}</p>
+            <p><strong>Descrição: </strong>{band.description_band} </p>
+            <p><strong>Nickname:</strong> {band.nickname}</p>
+            <p><strong>E-mail: </strong> {band.email}</p> 
+            <p><strong>Aprovada: </strong> {band.is_approved}</p>
+            <Button onClick={() => {this.props.approveBand(band.id)}}>Aprovar</Button>
             
         </div>    
     </Main>
@@ -49,7 +50,7 @@ class BandDetails extends Component{
 }
 
 const mapStateToProps = state => ({
-  bandId: state.user.bandId,
+  band: state.user.band,
   userInfo: state.user.userInfo
  
 });
@@ -59,7 +60,7 @@ const mapDispatchToProps = dispatch => {
     goBack: () => dispatch(goBack()),
     goToLogin: () => dispatch(replace(routes.login)),
     getBandDetails: (id) => dispatch(getBandDetails(id)),
-    approveBand: (id) => dispatch(approveBand(id))
+    approveBand: (bandId) => dispatch(approveBand(bandId))
   }
 }
 

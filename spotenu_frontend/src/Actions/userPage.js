@@ -2,7 +2,7 @@ import axios from "axios";
 import { routes } from "../../src/Containers/Router/index";
 import { replace, push } from "connected-react-router";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "https://7nok4l82c2.execute-api.us-east-1.amazonaws.com/dev"
 
 
 export const setUserInfo = (info) => ({ 
@@ -24,11 +24,11 @@ export const setAllBands = (bands) => ({
         bands
     }
 });
-export const getBandId = (id) =>({
+export const setSelectedBand = (band) =>({
 
-        type: 'GET_BAND_ID',
+        type: 'SET_SELECTED_BAND',
         payload: {
-            id
+            band
         }
 });
 //*************************************************************//
@@ -134,12 +134,12 @@ export const getBandDetails = (id) => async (dispatch) => {
       dispatch(setUserInfo(response.data));
       console.log(response.data.trip);
 };
-export const approveBand = (id) => async (dispatch) => {
+export const approveBand = (bandId) => async (dispatch) => {
     const token = window.localStorage.getItem("token");
     try {
        
-      await axios.post(`${baseUrl}/user/approve`,
-            { id },
+      await axios.put(`${baseUrl}/user/approve`,
+            { bandId },
             {
                 headers: {
 
@@ -147,7 +147,7 @@ export const approveBand = (id) => async (dispatch) => {
                 }
             })
             alert('Banda aprovada com sucesso!')
-        dispatch(getAllBands())
+        //dispatch(getAllBands())
     }
     catch (err) {
       

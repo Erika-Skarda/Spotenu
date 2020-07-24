@@ -4,7 +4,7 @@ import { replace, push } from "connected-react-router";
 import { routes } from "../../Router/index";
 import { ListPageWrapper, Main, Button } from './styled';
 // import Button from "@material-ui/core/Button";
-import {  getAllBands,  getBandId, approveBand } from '../../../Actions/userPage';
+import {  getAllBands,  setSelectedBand, approveBand } from '../../../Actions/userPage';
 
 
 class BandList extends Component{
@@ -18,8 +18,9 @@ class BandList extends Component{
     this.props.getAllBands();
   }
 
-  handleBandId = (id) => {
-    this.props.getBandId(id);
+  handleBand = (band) => {
+    console.log(band)
+    this.props.setSelectedBand(band);
     this.props.goToDetails();
   
   }
@@ -46,7 +47,7 @@ class BandList extends Component{
                   <li>
                       <strong> Nome: {band.name}</strong> 
                       <p>Aprovada: {band.is_approved}</p>
-                      <Button onClick={() => {this.handleBandId(band.id)}}>Detalhes</Button>
+                      <Button onClick={() => {this.handleBand(band)}}>Detalhes</Button>
                   </li>
                 )
               })}
@@ -68,7 +69,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
   return {
     getAllBands: () => dispatch(getAllBands()),
-    getBandId: (id) => dispatch(getBandId(id)),
+    setSelectedBand: (band) => dispatch(setSelectedBand(band)),
     goToDetails: (id) => dispatch(push(routes.band)),
     goToLogin: () => dispatch(replace(routes.login)),
   }
