@@ -7,7 +7,7 @@
 ## Frontend do Projeto Spotenu
 
 <p align="center">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fappdb.to%2Fview.php%3Ftype%3Dcydia%26trackid%3D1900000422%26store%3Dus&psig=AOvVaw1b12PHuxHY0MOlAh9MolPb&ust=1595976335713000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjZ06fB7uoCFQAAAAAdAAAAABAJ"/>
+  <img src="https://i.imgur.com/MagoMtL.png"/>
 </p>
 
 <p align="center">
