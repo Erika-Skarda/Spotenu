@@ -122,7 +122,7 @@ npm start
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://alligator.io/react/axios-react/)
 - [Material ui](https://material-ui.com/pt/)
-- [Firebase](https://firebase.google.com/)
+- [AWS](https://firebase.google.com/)
 
 ## Desenvolvido Por :octocat:
 
