@@ -76,7 +76,9 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 ### Frontend
 
 <br>
+
  :headphones: <b> 1. Tela de cadastro de usuário ouvinte </b>
+ 
 <br>
 
  :headphones: <b> 2. Tela de cadastro de usuários administradores </b>
@@ -85,108 +87,100 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 
  :headphones: <b> 3. Tela de cadastro de usuários bandas </b>
 
-
-
 <br>
 
-- **4. Tela de aprovação de bandas**
+:headphones: 4. Tela de aprovação de bandas**
 
     Deve possuir uma lista com todas as bandas e um botão que permita aprovar cada uma delas
 
 <br>
 
-- **5. Tela de Login**
+:headphones: 5. Tela de Login**
 
     Todos os usuários (ouvintes, administradores ou bandas) devem se logar pelo mesma tela. Eles podem fornecer o email ou o nickname e a senha correta. 
 
 <br>
 
-- **6. Tela de home**
+:headphones: 6. Tela de home**
 
     A tela de home pode ser acessada por todos os usuários. Ela deve possuir um menu que permita navegar pelas funcionalidades de cada um deles. 
     Por exemplo, para o usuário administrador, deve haver as possibilidades de: aprovar bandas, gerenciar gêneros musicais e adicionar administradores
 
 <br>
 
-- **7. Tela de ver e adicionar gêneos**
+:headphones: 7. Tela de ver e adicionar gêneos**
 
     Um administrador deve ser capaz de ver todos os gêneros musicais e adicionar quantos gêneros quiser passando as informações básica (no caso, só o nome).
 
 <br>
 
-- **8. Tela de criação de álbuns**
+-:headphones: 8. Tela de criação de álbuns**
 
     Essa funcionalidade é para banda criarem álbuns próprios. Para isso, ela deve passar um nome e selecionar os gêneros apropriados. 
 
 <br>
 
-- **9. Tela de criação de músicas**
+:headphones: 9. Tela de criação de músicas**
 
     Aqui é o onde as bandas criam músicas Para isso, devem fornecer o nome e o selecionar um álbum que já tenham criado.
 
 <br><br>
 
-### Desafios
-
-Você deve implementar os endpoints e as telas necessárias para se fazer as funcionalidades abaxio:
-
-<br>
-
-- **10. Procurar música**
+:headphones: 10. Procurar música**
 
     Essa funcionalidade pode ser acessada por usuários ouvintes (pagantes e não pagantes). Uma lista com o id e o nome deve ser retornada, paginada com 10 itens por vez.
 
 <br>
 
-- **11. Ver detalhe da música**
+:headphones: 11. Ver detalhe da música**
 
     Aqui, os usuários pagantes ou os não pagantes tem acesso a essa funcionalidade. Eles devem selecionar a música a partir de uma lista e serem redirecionados a uma tela com os detalhes dela
 
 <br>
 
-- **12. Tonar um usuário não pagante em um pagante**
+:headphones: 12. Tonar um usuário não pagante em um pagante**
 
     Um usuário administrador pode transformar um usuário não pagante em pagante, para ter acesso a outras funcionalidades. Caso o usuário já seja pagante, um erro deve ser mostrado.
 
 <br>
 
-- **13. Criação de playlist**
+:headphones: 13. Criação de playlist**
 
     Uma playlist pode ser criada por um usuário pagante. Ele só precisa fornecer um nome (e um id deve ser atrelado a ela). Inicalmente, ela é iniciada como privada, só podendo ser modificada pelo usuário que a criou.
 
 <br>
 
-- **14. Adicionar música a playlist**
+:headphones: 14. Adicionar música a playlist**
 
     Um usuário pode adicionar em sua playlist uma música.
 
 <br>
 
-- **15. Retirar música de playlist**
+:headphones: 15. Retirar música de playlist**
 
     Um usuário pode retirar uma música de uma playlist dele.
 
 <br>
 
-- **16. Ver todas as playlists**
+:headphones: 16. Ver todas as playlists**
 
     Um usuário pode ver a lista de suas playlists. A lista deve ser paginada com 10 itens.
 
 <br>
 
-- **17. Tornar playlist colaborativa**
+:headphones: 17. Tornar playlist colaborativa**
 
     Um usuário pode transformar a sua playlist em colaborativa. Permitindo que outros usuários a sigam e modifiquem.
 
 <br>
 
-- **18. Seguir playlist colaborativa**
+:headphones: 18. Seguir playlist colaborativa**
 
     Um usuário pode seguir uma playlist de outro usuário. 
 
 <br>
 
-- **19. Modificar endpoints de playlist**
+:headphones: 19. Modificar endpoints de playlist**
 
     Agora que possuimos a playlist colaborativa, você deve alterar as funcionalidades que são afetadas por isso
 
@@ -200,37 +194,37 @@ Você deve implementar os endpoints e as telas necessárias para se fazer as fun
 
 <br>
 
-- **20. Editar perfil**
+:headphones: 20. Editar perfil**
 
     Um usuário deve conseguir editar o seu perfil, alterando somente o nome.
 
 <br>
 
-- **21. Editar playlist**
+:headphones: 21. Editar playlist**
 
     Usuários criadores e seguidores podem alterar o nome de uma playlist
 
 <br>
 
-- **22. Editar música**
+:headphones: 22. Editar música**
 
     Os usuários banda podem alterar as suas músicas, mudando-a de álbum ou alterando o nome.
 
 <br>
 
-- **23. Deletar música**
+:headphones: 23. Deletar música**
 
     Os usuários banda podem deletar as suas músicas. Lembre-se de retirar todas as relações envolvidas: com álbuns, playlists e etc.
 
 <br>
 
-- **24. Deletar álbum**
+:headphones: 24. Deletar álbum**
 
     Os usuários banda podem deletar um álbum inteiro. Quando isso acontecer, todas as músicas e todas as relações envolvidas (inclusive as playlists) devem ser modificadoas.
 
 <br>
 
-- **25. Bloquear usuários ouvintes e músicos**
+:headphones:25. Bloquear usuários ouvintes e músicos**
 
     Um administrador deve ser capaz de bloquear um usuário (ouvintes ou músicos). Isso impede-os de logar.
 
