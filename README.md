@@ -7,15 +7,15 @@
 ## Frontend do Projeto Spotenu
 
  <p align="center" >
-  <img src="https://i.imgur.com/MagoMtL.png" width:"30%"/>
+  <img width="20%" src="https://i.imgur.com/MagoMtL.png" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
-  <img src="https://img.shields.io/static/v1?label=firebase&message=deploy&color=yellow&style=for-the-badge&logo=FIREBASE"/>
-  <img src="https://img.shields.io/static/v1?label=redux&message=library&color=purple&style=for-the-badge&logo=REDUX"/>
-  <img src="https://img.shields.io/static/v1?label=javascript&message=language&color=yellow&style=for-the-badge&logo=JAVASCRIPT"/>
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT" />
+  <img src="https://img.shields.io/static/v1?label=redux&message=library&color=yellow&style=for-the-badge&logo=REDUX"/>
+  <img src="https://img.shields.io/static/v1?label=javascript&message=language&color=green&style=for-the-badge&logo=JAVASCRIPT"/>
+  <img src="https://img.shields.io/static/v1?label=typescript&message=language&color=blue&style=for-the-badge&logo=TYPESCRIPT"/>
+
   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 </p>
 
@@ -89,7 +89,7 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 ## Deploy
 
 <p align="justify">
-  O deploy do projeto foi realizado no firebase e encontra-se disponivel em: https://spotenu-dd294.web.app/
+  O deploy do projeto foi realizado no firebase e encontra-se disponivel em: spotenu-erika.surge.sh
 </p>
 
 ## Pré-requisitos
@@ -133,5 +133,5 @@ npm start
 
 [MIT License](https://github.com/Erika-Skarda)
 
-Copyright :copyright: 2020 - Spotenu
+
 
