@@ -1,8 +1,8 @@
 # Labenu | Desenvolvimento Web Full Stack
 
 
-<p align="center">
-  <img src="https://imgur.com/xUhQLtc"/>
+ <p align="center">
+  <img src="https://i.imgur.com/xUhQLtc.png"/>
 </p>
 
 ## Frontend do Projeto Spotenu
