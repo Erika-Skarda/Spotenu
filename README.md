@@ -1,8 +1,5 @@
 # Labenu | Desenvolvimento Web Full Stack
-.fondologin{
-    background-color: #111D12!important;
-}
- 
+
  <p align="center">
   <img src="https://i.imgur.com/xUhQLtc.png"/>
 </p>
@@ -10,7 +7,7 @@
 ## Frontend do Projeto Spotenu
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59856574/86313495-9f2e0480-bbfb-11ea-9163-5c5e570cf8c1.PNG"/>
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fappdb.to%2Fview.php%3Ftype%3Dcydia%26trackid%3D1900000422%26store%3Dus&psig=AOvVaw1b12PHuxHY0MOlAh9MolPb&ust=1595976335713000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjZ06fB7uoCFQAAAAAdAAAAABAJ"/>
 </p>
 
 <p align="center">
