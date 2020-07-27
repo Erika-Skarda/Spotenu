@@ -6,8 +6,8 @@
 
 ## Frontend do Projeto Spotenu
 
- <p align="center" width:"30%">
-  <img src="https://i.imgur.com/MagoMtL.png"/>
+ <p align="center" >
+  <img src="https://i.imgur.com/MagoMtL.png" width:"30%"/>
 </p>
 
 <p align="center">
