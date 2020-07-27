@@ -220,9 +220,7 @@ npm start
 | [Likedin](https://www.linkedin.com/in/erika-skarda-99915488/) | 
 | :---: |
 
-## Licença 
 
-[MIT License](https://github.com/Erika-Skarda)
 
 
 
