@@ -76,11 +76,7 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 ### Frontend
 
 <br>
-
-- **1. Tela de cadastro de usuário ouvinte**
-
-    Um usuário ouvinte tem que fornecer o nome, o email, o nickname uma senha para se cadastrar
-
+- :headphones: 1. Tela de cadastro de usuário ouvinte**
 <br>
 
 - **2. Tela de cadastro de usuários administradores**
