@@ -153,46 +153,34 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 
 <br>
 
-:headphones: <b> 20. Editar perfil**
-
-    Um usuário deve conseguir editar o seu perfil, alterando somente o nome.
+:headphones: <b> 20. Editar perfil </b>
 
 <br>
 
-:headphones: <b> 21. Editar playlist**
-
-    Usuários criadores e seguidores podem alterar o nome de uma playlist
+:headphones: <b> 21. Editar playlist</b>
 
 <br>
 
 :headphones: <b> 22. Editar música </b>
 
-    Os usuários banda podem alterar as suas músicas, mudando-a de álbum ou alterando o nome.
-
 <br>
 
 :headphones: <b> 23. Deletar música </b>
-
-    Os usuários banda podem deletar as suas músicas. Lembre-se de retirar todas as relações envolvidas: com álbuns, playlists e etc.
 
 <br>
 
 :headphones:<b> 24. Deletar álbum </b>
 
-    Os usuários banda podem deletar um álbum inteiro. Quando isso acontecer, todas as músicas e todas as relações envolvidas (inclusive as playlists) devem ser modificadoas.
-
 <br>
 
 :headphones: <b> 25. Bloquear usuários ouvintes e músicos </b>
-
-    Um administrador deve ser capaz de bloquear um usuário (ouvintes ou músicos). Isso impede-os de logar.
 
 <br><br>
 
 ## Deploy
 
 <p align="justify">
-  O deploy do projeto foi realizado no firebase e encontra-se disponivel em: spotenu-erika.surge.sh
+  O deploy do projeto foi realizado no firebase e encontra-se disponivel em: [spotenu-erika.surge.sh]
 </p>
 
 ## Pré-requisitos
