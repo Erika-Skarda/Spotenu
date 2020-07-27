@@ -127,7 +127,7 @@ npm start
 
 ## Desenvolvido Por :octocat:
 
-| [<img src="https://user-images.githubusercontent.com/59856574/86283681-d11d7780-bbb7-11ea-90a5-9312ee67cdec.jpg" width=115><br><sub>Nauara Melo</sub>](https://www.linkedin.com/in/erika-skarda-99915488/) | 
+| [Likedin](https://www.linkedin.com/in/erika-skarda-99915488/) | 
 | :---: |
 
 ## Licença 
