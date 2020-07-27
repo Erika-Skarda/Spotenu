@@ -79,11 +79,11 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
  :headphones: <b> 1. Tela de cadastro de usuário ouvinte </b>
 <br>
 
- headphones: <b> 2. Tela de cadastro de usuários administradores </b>
+ :headphones: <b> 2. Tela de cadastro de usuários administradores </b>
 
 <br>
 
- headphones: <b> 3. Tela de cadastro de usuários bandas </b>
+ :headphones: <b> 3. Tela de cadastro de usuários bandas </b>
 
 
 
