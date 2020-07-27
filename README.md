@@ -79,15 +79,13 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
  :headphones: <b> 1. Tela de cadastro de usuário ouvinte </b>
 <br>
 
-- **2. Tela de cadastro de usuários administradores**
-
-    Os administradores também se cadastram com nome, email, nickname e senha. Aqui, a senha tem que possuir, no mínimo, 10 carácteres. Somente um usuário administrador pode adicionar outro (ou seja, algum usuário admin deve estar logado para fazer essa funcionalidade
+ headphones: <b> 2. Tela de cadastro de usuários administradores </b>
 
 <br>
 
-- **3. Tela de cadastro de usuários bandas**
+ headphones: <b> 3. Tela de cadastro de usuários bandas </b>
 
-    A banda precisa informar o seu nome, o nickname, o email, a sua descrição e uma senha, com, no mínimo 6 caracteres. 
+
 
 <br>
 
