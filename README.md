@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/59856574/86274338-e7bbd280-bba7-11ea-9b0f-312418c0c364.png"/>
+  <img src="https://imgur.com/xUhQLtc"/>
 </p>
 
 ## Frontend do Projeto Spotenu
