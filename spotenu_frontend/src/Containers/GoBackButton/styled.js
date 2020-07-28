@@ -5,6 +5,7 @@ export const WrapperHeader = styled.div `
     width: 100%; 
     display:flex; 
     padding:15px;
+    background-color:white;
 `;
 export const WrapperTitle = styled.div `
     width: 175px;

@@ -9,6 +9,9 @@ import HomePageAdmin from "../../Containers/HomePageAdmin/index";
 import BandList from "../../Containers/HomePageAdmin/BandList/index";
 import GenreList from "../..//Containers/HomePageAdmin/GenreList/index";
 import BandDetails from "../HomePageAdmin/BandDetails";
+import CreateGenre from "../HomePageAdmin/CreateGenre"
+import CreateAdmin from "../HomePageAdmin/CreateAdmin";
+import HomePageBanda from "../HomePageBanda";
 
 export const routes = {
   splashScreen: "/",
@@ -17,7 +20,9 @@ export const routes = {
   home: "/home",
   bandlist: "/band",
   band:"/details",
-  genrelist: "/genre"
+  //genrelist: "/genre",
+  genrecreate: "/creategenre",
+  admincreate: "/createadmin"
   
 };
 
@@ -31,6 +36,9 @@ function Router(props) {
         <Route exact path={routes.home} component={HomePageAdmin} />
         <Route exact path={routes.bandlist} component={BandList} />
         <Route exact path={routes.band} component={BandDetails} />
+        <Route exact path={routes.genrecreate} component={CreateGenre} />
+        <Route exact path={routes.admincreate} component={CreateAdmin} />
+        <Route exact path={routes.home} component={HomePageBanda} />
         <Route path={routes.error} component={PageError} /> 
       </Switch>
     </ConnectedRouter>

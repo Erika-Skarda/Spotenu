@@ -1,28 +1,36 @@
 import styled from 'styled-components';
 
 export const ListPageWrapper = styled.div`
-    min-height: 90vh;
+    min-height: min(378px, 100%);
     max-height: 100%;
     background: #fff ;
     color: black;
     padding: 0 18px;
 
-     > button {
+    > button {
         float: right;
         margin: 40px 20px; 
     }
 
     Header {
         position: absolute;
-      
+        
     }
-
+    
     > h1 {
         padding-top: 120px;
         text-align: center;
     } 
-`
+    `
 
+export const Img = styled.img`
+  width: 32px;
+  height: 32px;
+  opacity: 90%;
+  cursor: pointer;
+  margin-left: 88%;
+  margin-top: 22px;      
+`;
 export const Main = styled.main`
     padding-top: 25px;
     
@@ -69,4 +77,11 @@ export const Button = styled.button`
     font-size:16px;
     margin: 8px 16px;
     border-radius: 4px;
+`;
+export const Image = styled.img`
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+
 `;
