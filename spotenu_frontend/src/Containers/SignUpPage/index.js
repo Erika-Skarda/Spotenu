@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { connect } from"react-redux"
 import { bindActionCreators } from "redux";
 import * as UserAction from "../../Actions/userPage";
-import {signUp }  from "../../Actions/userPage";
+import { signUp }  from "../../Actions/userPage";
 import * as RoleAction from "../../Actions/role"
 import {
         Button, 
@@ -123,57 +123,7 @@ const FormSignUpBanda = [
         
     }
 ]
-const FormSignUpAdmin = [
-    {
-        name:"name",
-        type:"text",
-        placeholder:"Nome e sobrenome",
-        label:"Nome",
-        required:true,
-        title: "Campo obrigatório",
-        pattern:"[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{3,}"
 
-    },
-    {
-        name:"email",
-        type:"email",
-        placeholder:"email@email.com",
-        label:"E-mail",
-        required:true,
-        title: "Campo obrigatório",
-        pattern:"[a-z0-9_.+-%]+@[a-z0-9.-]+\.[a-z]{3,}$" 
-    },
-    {
-        name:"nickname",
-        type:"text",
-        placeholder:"Nickname",
-        label:"Nickname",
-        required:true,
-        title: "Campo obrigatório",
-        pattern:"[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{3,}"
-
-    },
-    {
-        name:"password",
-        type:"password",
-        placeholder:"Mínimo 10 caracteres",
-        label:"Senha",
-        title:"Digite no mínimo 10 caracteres",
-        required:true,
-        pattern:"[A-Za-z0-9]{10,20}",
-        
-    },
-    {
-        name:"confirmPassword",
-        type:"password",
-        placeholder:"Confirme a senha anterior",
-        label:"Senha",
-        title:"Digite no mínimo 10 caracteres",
-        required:true,
-        pattern:"[A-Za-z0-9]{10,20}",
-        
-    }
-]
 class SignUpPage extends Component {
     constructor(props){
         super(props)

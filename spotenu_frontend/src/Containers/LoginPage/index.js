@@ -9,7 +9,6 @@ import { LoginWrapper,
         Text, 
         DivTitle, 
         Image } from "./styled";
-
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
@@ -47,8 +46,10 @@ class LoginPage extends Component {
         const { emailOrNickname, password } = this.state;
         return (
             <LoginWrapper>
+                <h1>Spotenu</h1>
                 <Image src={require("../../Assets/logo.png")}
-                        alt="logo da Spotenu" />
+                        alt="logo da Spotenu" /> 
+                        
                 <DivTitle>
                     <Text>Entrar</Text>
                 </DivTitle>
@@ -67,7 +68,7 @@ class LoginPage extends Component {
                       variant="outlined"
                       InputLabelProps = {{shrink:true}}
                       required={true}
-                      //inputProps={{ pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" }}
+                      
                       
                     />
 

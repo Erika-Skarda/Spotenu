@@ -3,7 +3,8 @@
         allBands: [],
         allUsers: [],
         band: undefined,
-        userInfo: []
+        userInfo: [],
+        profile: {}
     }
     
     const user = (state = initialState, action) => {
@@ -30,6 +31,11 @@
                 return {
                     ...state,
                     band:action.payload.band
+                };
+            case "SET_PROFILE":
+                return {
+                    ...state,
+                    profile: action.payload.profile
                 }
     
             default:

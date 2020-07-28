@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { replace, push } from "connected-react-router";
 import { routes } from "../../Router/index";
-import { ListPageWrapper, Main, Button } from './styled';
+import { ListPageWrapper, Main, Button, Image, Img } from './styled';
 // import Button from "@material-ui/core/Button";
 import {  getAllBands,  setSelectedBand, approveBand } from '../../../Actions/userPage';
 
@@ -34,10 +34,16 @@ class BandList extends Component{
     const isLogged = localStorage.getItem("token") !== null;
 
   return (
-    <ListPageWrapper>
-      
-       {isLogged && <Button onClick={this.handleLogout}>Sair</Button>}
+    <ListPageWrapper> 
 
+      {isLogged && <Img src={require("../../../Assets/log-out.svg")}
+      alt="ícone de saída do app" onClick={this.handleLogout} />}
+
+      <h1>Spotenu</h1>
+      
+      <Image src={require("../../../Assets/logo.png")}
+      alt="logo da Spotenu" /> 
+      
         <h1>Lista das bandas</h1>
       <Main>
           <ul>

@@ -16,10 +16,11 @@ export const Container = styled.div`
   flex-direction: column;
   max-height: 100%;
   overflow-y: auto;
-  scrollbar-width: none; /** Firefox */
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  scrollbar-width: none; 
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
 `;
 
 export const Banner = styled.div`
@@ -28,17 +29,19 @@ export const Banner = styled.div`
   height: min(33vw, 199px);
   background-color: "#D1B4D9";
   position: relative;
+  opacity:85%;
 
 `;
 
 export const StyledAvatar = styled.img`
    width: max(45px, min(135px, 22vw));
-  height: max(45px, min(135px, 22vw)); 
+   height: max(45px, min(135px, 22vw)); 
 
   border: 3.75px solid "#D1B4D9";
   border-radius: 50%;
   position: absolute;
   bottom: max(-1px, -10vw);
   left: 15px;
+  opacity: 1;
 
 `;

@@ -5,7 +5,13 @@ export const LoginWrapper = styled.div`
     display:flex;
     flex-direction: column;
     align-items:center;
-    `
+
+        h1 {
+            margin-top:45px;
+            font-size: 1.3em
+
+        }
+`;
 
 export const DivTitle = styled.div`
     width: 360px;
@@ -13,7 +19,7 @@ export const DivTitle = styled.div`
     text-align:center;
     justify-items:center;
     margin-top:20px;
-    `
+`;
 
 export const Text = styled.text `
      width: 296px;
@@ -49,13 +55,10 @@ export const TextFieldStyled = styled(TextField) `
     height: 56px;
     border-radius: 2px;
     padding: 0 auto;
-   
- 
-`
+`;
 export const Image = styled.img`
-    margin-top: 88px;
+    margin-top: 20px;
     width: 200px;
     height: 100px;
     object-fit: contain;
-
 `;

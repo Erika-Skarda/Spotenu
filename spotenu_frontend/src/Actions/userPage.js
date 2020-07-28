@@ -17,6 +17,13 @@ export const setAllUsers = (users) => ({
         users
     }
 });
+//************************************************* //
+export const setProfile = (profile) => ({
+    type: "SET_PROFILE",
+    payload: {
+       profile
+    }
+})
 //**************************************************//  
 export const setAllBands = (bands) => ({
     type: "SET_ALL_BANDS",
@@ -132,8 +139,35 @@ export const getBandDetails = (id) => async (dispatch) => {
       );
 
       dispatch(setUserInfo(response.data));
-      console.log(response.data.trip);
+
 };
+//{
+//     "id": "bf31a467-42f4-4336-b55b-d0a513a65fce",
+//     "name": "Erika",
+//     "email": "erika@labenu.com",
+//     "nickname": "erikita",
+//     "password": "$2a$12$ugFrUd8vga5ojuknsdKbQeOqjyyDrfMXXGQMMDnb7yE3kWXKauViW",
+//     "role": "admin",
+//     "description_band": null,
+//     "is_approved": 1
+// }
+export const getProfile = () => async (dispatch) => { 
+        const token = localStorage.getItem('token')
+    try { 
+    
+        const response = await axios.get(`https://7nok4l82c2.execute-api.us-east-1.amazonaws.com/dev/user/profile`, 
+        { 
+            headers: { 
+                 "authorization": token
+            } 
+        }); 
+    dispatch(setProfile(response.data))
+    console.log(response.data)
+    
+    }catch (err) { 
+        console.log(err); 
+    }};
+  
 export const approveBand = (bandId) => async (dispatch) => {
     const token = window.localStorage.getItem("token");
     try {
@@ -153,6 +187,26 @@ export const approveBand = (bandId) => async (dispatch) => {
       
         console.error(err.response)
      
+    };
+};
+export const getAllUsers = () => async (dispatch) => {
+    const token = window.localStorage.getItem("token");
+
+    try {
+      
+        const response = await axios.get(`${baseUrl}/user/all`, {
+            headers: {
+
+                "authorization": token,
+            }
+        })
+      
+        dispatch(setAllUsers(response.data))
+    }
+    catch (err) {
+       
+        console.error(err.response)    
     }
 
 }
+

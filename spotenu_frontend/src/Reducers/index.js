@@ -10,7 +10,8 @@ export const generateReducers = history =>
     router: connectRouter(history),
     user:user,
     role:role,
-    genre:genre
+    genre:genre,
+    //album:album
 
     
   });

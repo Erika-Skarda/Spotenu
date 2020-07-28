@@ -3,7 +3,7 @@ const initialState = {
   };
   
   const role = (state = initialState, action) => {
-     console.log(action) 
+   
     switch (action.type) {
       case "CHANGE_ROLE":
         return { ...state, selectedRole: action.payload.role };
