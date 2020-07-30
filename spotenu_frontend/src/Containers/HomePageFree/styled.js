@@ -1,4 +1,5 @@
 import img2 from "../../Assets/musica-.jpg";
+import styled from "styled-components";
 
 export const Div = styled.div`
     

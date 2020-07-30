@@ -19,9 +19,9 @@ componentDidMount() {
     const token = localStorage.getItem('token');
     const userRole = localStorage.getItem("userRole")
 
-        if (token === null || userRole !== "banda") {
+        if (token === null || !token || userRole !== "banda") {
 
-        this.props.goToLogin();
+             this.props.goToLogin();
 
         }
 
