@@ -1,26 +1,28 @@
 import styled from 'styled-components';
 
 export const ListPageWrapper = styled.div`
-    min-height: min(378px, 100%);
+    align-items: center;
+    min-height: min(378px,100%);
     max-height: 100%;
-    background: #fff ;
-    color: black;
+    display: flex;
     padding: 0 18px;
+    flex-direction: column;
 
     > button {
         float: right;
         margin: 40px 20px; 
     }
-
-    Header {
-        position: absolute;
-        
-    }
     
-    > h1 {
-        padding-top: 120px;
+        > h1 {
+            padding-top: 60px;
+            text-align: center;
+            font-size: 1.3em
+        } 
+        > h2 {
+ 
         text-align: center;
-    } 
+      
+        } 
     `
 
 export const Img = styled.img`
@@ -29,10 +31,13 @@ export const Img = styled.img`
   opacity: 90%;
   cursor: pointer;
   margin-left: 88%;
-  margin-top: 22px;      
+  margin-top: 22px;  
+      
 `;
 export const Main = styled.main`
     padding-top: 25px;
+    width:100%;
+
     
 
      ul {
@@ -40,6 +45,7 @@ export const Main = styled.main`
         grid-template-columns: repeat(2, 0.5fr);
         grid-gap: 10px;
         list-style-type: none;
+        width: 92vw;
 
             > li {
                 display: flex;
@@ -70,8 +76,8 @@ export const Main = styled.main`
     }
 `;
 export const Button = styled.button`
-    width: 328px;
-    height: 42px;
+    width: 80%;
+    height: 30px;
     border-radius: 1px;
     background-color: #AEDFF2; 
     font-size:16px;

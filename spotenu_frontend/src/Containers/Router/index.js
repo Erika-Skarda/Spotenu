@@ -12,18 +12,28 @@ import BandDetails from "../HomePageAdmin/BandDetails";
 import CreateGenre from "../HomePageAdmin/CreateGenre"
 import CreateAdmin from "../HomePageAdmin/CreateAdmin";
 import HomePageBanda from "../HomePageBanda";
+import HomePageFree from "../HomePageFree";
+import HomePagePremium from "../HomePagePremium";
 
 export const routes = {
   splashScreen: "/",
   login:"/login",
   signup:"/signup",
+  //Admin
   home: "/home",
   bandlist: "/band",
   band:"/details",
   //genrelist: "/genre",
   genrecreate: "/creategenre",
-  admincreate: "/createadmin"
-  
+  admincreate: "/createadmin",
+  //Banda
+  homeband: "/homebanda",
+  //Ouvinte pagante
+  homepremium:"/homepremium",
+  //Ouvinte não pagante
+  homefree:"/homefree"
+
+
 };
 
 function Router(props) {
@@ -33,12 +43,18 @@ function Router(props) {
         <Route exact path={routes.splashScreen} component={SplashScreen} />
         <Route exact path = {routes.login} component = {LoginPage} />
         <Route exact path = {routes.signup} component = {SignUpPage} />
+
         <Route exact path={routes.home} component={HomePageAdmin} />
         <Route exact path={routes.bandlist} component={BandList} />
         <Route exact path={routes.band} component={BandDetails} />
         <Route exact path={routes.genrecreate} component={CreateGenre} />
         <Route exact path={routes.admincreate} component={CreateAdmin} />
-        <Route exact path={routes.home} component={HomePageBanda} />
+
+        <Route exact path={routes.homeband} component={HomePageBanda} />
+
+        <Route exact path={routes.homepremium} component={HomePagePremium} />
+
+        <Route exact path={routes.homefree} component={HomePageFree} />
         <Route path={routes.error} component={PageError} /> 
       </Switch>
     </ConnectedRouter>

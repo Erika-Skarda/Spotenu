@@ -53,6 +53,26 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
         localStorage.setItem("token", token)
         localStorage.setItem("userRole", userRole)
         // Ver como será dispatch
+
+        switch(userRole) {
+            case "admin":
+                dispatch(push(routes.home));
+                break
+            case "banda":
+                dispatch(push(routes.homeband));
+                break
+            case "ouvinte pagante":
+                dispatch(push(routes.homepremium));
+                break;
+            case "ouvinte não pagante":
+                dispatch(push(routes.homefree));
+                break;
+            default:
+                dispatch(push(routes.login));
+                break;
+
+
+        }
        
 
     } catch(err){
@@ -61,7 +81,7 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
         console.log(emailOrNickname,password, err.message)
     } 
     
-    dispatch(push(routes.home))
+    //dispatch(push(routes.home))
 };
 export const redirectSignUp = () => async(dispatch) => {
     try {

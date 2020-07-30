@@ -44,7 +44,7 @@ class BandList extends Component{
       <Image src={require("../../../Assets/logo.png")}
       alt="logo da Spotenu" /> 
       
-        <h1>Lista das bandas</h1>
+        <h2>Lista das bandas</h2>
       <Main>
           <ul>
               {this.props.allBands && this.props.allBands.map(band => {

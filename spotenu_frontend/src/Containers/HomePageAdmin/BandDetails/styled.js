@@ -57,16 +57,29 @@ export const Main = styled.main`
             border-radius: 4px;
             overflow: hidden;
             padding: 8px;
+            
 
         }
     }
 `;
 export const Button = styled.button`
-    width: 328px;
-    height: 42px;
+    width: 120px;
+    height: 30px;
     border-radius: 1px;
     background-color: #AEDFF2; 
     font-size:16px;
     margin: 8px 16px;
     border-radius: 4px;
+    overflow: hidden;
+    border: 0;
+    
+`;
+export const Img = styled.img`
+  width: 32px;
+  height: 32px;
+  opacity: 90%;
+  cursor: pointer;
+  margin-left: 88%;
+  margin-top: 22px;  
+      
 `;

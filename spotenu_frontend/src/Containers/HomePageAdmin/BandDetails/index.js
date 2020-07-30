@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { replace, push, goBack } from "connected-react-router";
 import { routes } from "../../Router/index";
-import { ListPageWrapper, Main, Button } from './styled';
+import { ListPageWrapper, Main, Button, Img } from './styled';
 // import Button from "@material-ui/core/Button";
 import {  getBandDetails, approveBand } from '../../../Actions/userPage';
 
@@ -29,7 +29,9 @@ class BandDetails extends Component{
   return (
     <ListPageWrapper>
       
-       {isLogged && <Button onClick={this.handleLogout}>Sair</Button>}
+      {isLogged && <Img src={require("../../../Assets/log-out.svg")}
+      alt="ícone de saída do app" onClick={this.handleLogout} />}
+
        <Button onClick={goBack}>Lista das bandas</Button>
       <h1>Detalhes da Banda</h1>
     <Main>
