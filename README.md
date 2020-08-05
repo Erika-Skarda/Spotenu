@@ -193,7 +193,7 @@ Para se logar, o usuário músico pode fornecer o email ou o nickname (junto com
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/nauaramelo/spotenu-front.git
+git clone https://github.com/Erika-Skarda/Spotenu.git
 ```
 Entre no projeto e instale as dependências através do comando:
 ```
