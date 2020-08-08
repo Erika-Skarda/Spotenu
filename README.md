@@ -203,7 +203,11 @@ Por último, suba a aplicação:
 ```
 npm start
 ```
-
+## Acessos:
+Admin:
+- erikita 123456
+- paulinha 12345678910
+- belezinha 12345678910
 ## Linguagens, dependencias e libs utilizadas :books:
 
 - [Node](https://nodejs.org/en/)
