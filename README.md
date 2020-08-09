@@ -208,6 +208,16 @@ Admin:
 - erikita 123456
 - paulinha 12345678910
 - belezinha 12345678910
+
+Banda:
+- Gatolino 123456
+- darvas 123456
+- vacilão 123456
+- vacilona 123456
+
+Pagante Ouvinte
+
+- Francisca 123456
 ## Linguagens, dependencias e libs utilizadas :books:
 
 - [Node](https://nodejs.org/en/)
