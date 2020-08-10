@@ -1,8 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { routes } from "../../Router/index";
+import { routes } from "../../../Router/index";
 import { push, replace } from "connected-react-router";
-import { createGenre } from '../../../Actions/genrePage';
+
+import { createAlbum } from '../../../../Actions/albumPage';
+
 import { CreateGenreWrapper, 
          Image,
          DivTitle,
@@ -11,13 +13,13 @@ import { CreateGenreWrapper,
          FormCreateGenre,
          Button
           } from './styled';
-import BackButton from "../../../Containers/GoBackButton";
+import BackButton from "../../../../Containers/GoBackButton";
 
-class CreateGenre extends React.Component {
+class CreateAlbum extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            genreForm: ""
+            albumForm: ""
         }
     }
     componentDidMount() {
@@ -29,13 +31,13 @@ class CreateGenre extends React.Component {
     };
     handleInputChange = (event) =>{
         const { name, value } = event.target;
-        this.setState({genreForm: {...this.state.genreForm, [name]: value}})
+        this.setState({albumForm: {...this.state.albumForm, [name]: value}})
     };
     handleSubmit = (event) =>{
         event.preventDefault();
   
-        this.props.createGenre(this.state.genreForm.nome)
-         this.setState({genreForm: ""});
+        this.props.createGenre(this.state.albumForm.nome)
+        this.setState({albumForm: ""});
     };
     render() {
       return (
@@ -43,11 +45,11 @@ class CreateGenre extends React.Component {
 
             <BackButton showButtonGoBack={true} />
             <h1>Spotenu</h1>
-            <Image src={require("../../../Assets/logo.png")}
+            <Image src={require("../../../../Assets/logo.png")}
             alt="logo da Spotenu" /> 
 
              <DivTitle>
-                <Text>Novo Gênero</Text>
+                <Text>Novo Album</Text>
             </DivTitle> 
             <FormCreateGenre onSubmit={this.handleSubmit}>
                 <TextFieldStyled         
@@ -55,7 +57,7 @@ class CreateGenre extends React.Component {
                     name="nome"
                     type="text"
                     label="Nome"
-                    value={this.state.genreForm.name}
+                    value={this.state.albumForm.name}
                     style={{
                     marginTop:'5px',
                     marginLeft:'auto',
@@ -76,15 +78,11 @@ class CreateGenre extends React.Component {
         );
     }
 }
-// const mapStateToProps = (state) =>{
-//     return{
-//         allGenres: state.genre.allGenres
-//     }
-// }
+
 const mapDispatchToProps = dispatch =>{
     return{
         goToLogin: () => dispatch(replace(routes.login)),
-        createGenre: (genre) => dispatch(createGenre(genre))
+        createAlbum: (albumData) => dispatch(createAlbum(albumData))
     }
   }
-  export default connect (null, mapDispatchToProps) (CreateGenre);
+  export default connect (null, mapDispatchToProps) (CreateAlbum);

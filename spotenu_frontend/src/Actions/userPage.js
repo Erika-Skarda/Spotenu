@@ -81,7 +81,6 @@ export const login = (emailOrNickname, password) => async(dispatch) => {
         console.log(emailOrNickname,password, err.message)
     } 
     
-    //dispatch(push(routes.home))
 };
 export const redirectSignUp = () => async(dispatch) => {
     try {
@@ -139,7 +138,7 @@ export const redirectSignUp = () => async(dispatch) => {
         })
        
         dispatch(setAllBands(response.data))
-        console.log(response.data)
+        // console.log(response.data)
     }
     catch (err) {
     
@@ -193,7 +192,7 @@ export const approveBand = (bandId) => async (dispatch) => {
     try {
        
       await axios.put(`${baseUrl}/user/approve`,
-            { bandId },
+            { id:bandId },
             {
                 headers: {
 

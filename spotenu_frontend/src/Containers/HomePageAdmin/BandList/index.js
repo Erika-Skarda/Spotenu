@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { replace, push } from "connected-react-router";
 import { routes } from "../../Router/index";
+
 import { ListPageWrapper, Main, Button, Image, Img } from './styled';
 // import Button from "@material-ui/core/Button";
 import {  getAllBands,  setSelectedBand, approveBand } from '../../../Actions/userPage';
@@ -19,7 +20,7 @@ class BandList extends Component{
   }
 
   handleBand = (band) => {
-    console.log(band)
+    // console.log(band)
     this.props.setSelectedBand(band);
     this.props.goToDetails();
   
