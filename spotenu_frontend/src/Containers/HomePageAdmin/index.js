@@ -37,24 +37,7 @@ componentDidMount() {
       <Div>
         <BackButton showButtonGoBack={true}/>
         <ProfilePage />
-        {/* <script src="home.js"></script>
-        <nav class="top-right open">
-            <a class="disc l1">
-                <div>Bandas</div>
-            </a>
-            <a class="disc l2">
-                <div>Criar gêneros </div>
-            </a>
-            <a class="disc l3">
-                <div>novo Admin</div>
-            </a>
-            <a class="disc l4">
-                <div>Gêneros</div>
-            </a>
-            <a class="disc l5 toggle">
-                Menu
-            </a>
-        </nav> */}
+   
         <WrapperButton>
             <Button type="button" onClick = { goToBand }>Bandas</Button>
             <Button type="button" onClick = { goToCreateGenre }>Criar gêneros musicais</Button>

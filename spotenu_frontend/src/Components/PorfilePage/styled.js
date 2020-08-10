@@ -1,15 +1,6 @@
 import styled, { css } from 'styled-components';
+import { theme } from '../../Style/theme';
 
-import {
-    Divider,
-    Card,
-    CardContent,
-    Typography,
-    Avatar,
-    TextField,
-    CardActions,
-    Button
-  } from "@material-ui/core";
   
 export const Container = styled.div`
   display: flex;
@@ -34,10 +25,10 @@ export const Banner = styled.div`
 `;
 
 export const StyledAvatar = styled.img`
-   width: max(45px, min(135px, 22vw));
-   height: max(45px, min(135px, 22vw)); 
+   width: max(50px, min(135px, 22vw));
+   height: max(50px, min(135px, 22vw)); 
 
-  border: 3.75px solid "#D1B4D9";
+  border: 3.75px solid ${theme.background};
   border-radius: 50%;
   position: absolute;
   bottom: max(-1px, -10vw);

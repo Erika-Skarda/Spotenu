@@ -41,7 +41,7 @@ export const createGenre = (genre) => async (dispatch) => {
     const token = window.localStorage.getItem("token");
 
     const body = {
-        genre
+        music_genre:genre
     }
     try {
         
