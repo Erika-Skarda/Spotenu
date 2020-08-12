@@ -17,6 +17,7 @@
   <img src="https://img.shields.io/static/v1?label=styled-component&message=library&color=pink&style=for-the-badge&logo=STYLED-COMPONENTS"/>
   <img src="https://img.shields.io/static/v1?label=material-ui&message=library&color=blue&style=for-the-badge&logo=MATERIAL-UI"/>
 </p>
+</br>
 
 > Status do Projeto: Em desenvolvimento :warning: 
 
